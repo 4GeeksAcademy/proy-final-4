@@ -1,0 +1,184 @@
+@import url('./variables.css');
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+/* .product-detail-container * {outline: 1px solid red;} */
+
+.invisible-header-box {
+    min-height: 5rem;
+    width: 100dvw;
+}
+
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart-container,
+.cart-container {
+    filter: drop-shadow(1px 1px 0px var(--color-forest));
+    background: var(--color-white);
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    border: none;
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
+
+.heart-container {
+    color: var(--color-light-gray);
+    top: -20%;
+    right: -20%;
+}
+
+.heart-container:hover {
+    background: var(--color-light-gray);
+    color: var(--color-red);
+}
+
+.cart-container {
+    color: var(--color-green);
+    bottom: -20%;
+    right: -20%;
+}
+
+.cart-container:hover {
+    color: var(--color-white);
+    background: var(--color-green);
+}
+
+.heart-container .bi-suit-heart-fill,
+.cart-container .bi-cart4 {
+    filter: drop-shadow(1px 1px 0px var(--color-forest));
+    margin: auto;
+    display: grid;
+    place-items: center;
+    font-size: 1.8em;
+}
+
+/* ___________CARROUSELL__________ */
+
+.product-detail-container .images-container {
+    overflow: hidden;
+    height: min-content;
+    min-width: 200px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1em;
+    border-right: 2px solid var(--color-cream);
+}
+
+.image-gallery-image {
+    width: fit-content;
+    max-height: 100%;
+}
+
+.image-gallery-thumbnail-image,
+.image-gallery-thumbnail,
+.image-gallery-thumbnail-inner {
+    max-width: 50px;
+}
+
+.image-gallery-icon {
+    /* outline: 1px solid red; */
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-gallery-icon:last-child {
+    height: 40px;
+    width: 66px;
+    margin-right: calc(50% - 33px);
+    margin-bottom: 0.4em;
+}
+
+
+/* ___________TARJETA__PRODUCTO____________ */
+
+.product-detail-container .first-container {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 40%);
+    background: var(--color-white);
+    border-radius: 10px;
+    max-width: 700px;
+    display: flex;
+    padding: 2em;
+    margin: 2em;
+}
+
+.product-detail-container .detail-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product-detail-container .add-container p {
+    color: var(--color-red);
+}
+
+.product-detail-container .detail-container .data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 1em;
+}
+
+.product-detail-container .detail-container .data-container button {
+    border: 1px solid var(--color-forest);
+    background: var(--color-light-green);
+    padding: 0.6em;
+    border-radius: 4px;
+    width: 80%;
+    margin: 0 auto;
+    transition: 0.4s ease;
+    font-weight: bolder;
+}
+
+.product-detail-container .detail-container .data-container button:hover {
+    border: 1px solid var(--color-forest);
+    background: var(--color-green);
+
+}
+
+@media (width < 768px) {
+
+    .heart-container {
+        top: 20%;
+        right: 4%;
+    }
+
+    .cart-container {
+        top: calc(20% + 80px);
+        right: 4%;
+    }
+
+    .product-detail-container .first-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1em;
+        padding: 0.8em;
+    }
+
+    .product-detail-container .images-container {
+        height: min-content;
+        min-width: 200px;
+        max-width: 50%;
+        border-right: none;
+        border-bottom: 2px solid var(--color-cream);
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .product-detail-container .detail-container .data-container {
+        width: 90%;
+        margin: 0 auto;
+        align-items: start;
+    }
+}

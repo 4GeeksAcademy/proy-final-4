@@ -7,6 +7,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			auth: false,
 			error: {},
 			mercadoPago: {},
+			products: [],
+			product:{},
+			favorites:[],
 		},
 		actions: {
 			// loginFetch: async () => {
@@ -138,14 +141,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Obtener todos los productos
 			getProducts: async () => {
 				try {
-					const response = await fetch(`${API_URL}/products`);
-					if (response.ok) {
+					const response = await fetch(`${process.env.BACKEND_URL}/api/products`);
+					// if (response.ok) {
 						const data = await response.json();
-						return { success: true, data: data.results };
-					} else {
-						const errorData = await response.json();
-						return { success: false, error: errorData.msj };
-					}
+					// 	//return { success: true, data: data.results };
+					// } else {
+					// 	const errorData = await response.json();
+					// 	return { success: false, error: errorData.msj };
+					// }
+					console.log(data)
+					setStore({products: data.results})
+					return true
 				} catch (error) {
 					return { success: false, error: error.message };
 				}
@@ -153,7 +159,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Obtener un producto específico
 			getProduct: async (id) => {
 				try {
-					const response = await fetch(`${API_URL}/product/${id}`);
+					const response = await fetch(`${process.env.BACKEND_URL}/product/${id}`);
 					if (response.ok) {
 						const data = await response.json();
 						return { success: true, data };
@@ -168,7 +174,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Agregar un nuevo producto
 			addProduct: async (product) => {
 				try {
-					const response = await fetch(`${API_URL}/product`, {
+					const response = await fetch(`${process.env.BACKEND_URL}/product`, {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/json' },
 						body: JSON.stringify(product),
@@ -187,7 +193,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Eliminar un producto
 			deleteProduct: async (id) => {
 				try {
-					const response = await fetch(`${API_URL}/product/${id}`, { method: 'DELETE' });
+					const response = await fetch(`${process.env.BACKEND_URL}/product/${id}`, { method: 'DELETE' });
 					if (response.ok) {
 						return { success: true };
 					} else {
@@ -201,7 +207,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Actualizar un producto
 			updateProduct: async (id, updates) => {
 				try {
-					const response = await fetch(`${API_URL}/products/${id}`, {
+					const response = await fetch(`${process.env.BACKEND_URL}/products/${id}`, {
 						method: 'PUT',
 						headers: { 'Content-Type': 'application/json' },
 						body: JSON.stringify(updates),

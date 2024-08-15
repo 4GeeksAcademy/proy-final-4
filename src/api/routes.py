@@ -238,10 +238,15 @@ def preference():
     total = body["total"]   # acá decimos que en el  body mandamos el total a pagar por el cliente? 
  # Crea un ítem en la preferencia 
     preference_data = { 
-    "items": [ {
-        "title": "Mi producto",  #estas líneas las vamos a poder editar con los datos de nuestra API. 
-        "quantity": 1,   #estos tres son los requeridos obligatoriamente por mercadopago. 
-        "unit_price": 75.76,   #aca va el total a pagar por el cliente. 
+    "items": [ 
+        {
+        # "title": "Mi producto",  #estas líneas las vamos a poder editar con los datos de nuestra API. 
+        # "quantity": 1,   #estos tres son los requeridos obligatoriamente por mercadopago. 
+        # "unit_price": 75.76,   #aca va el total a pagar por el cliente. 
+        "title": request.json.get('title', 'Mi producto'),
+        "quantity": int(request.json.get('quantity', 1)),
+        "unit_price": float(request.json.get('price', 100))
+
  #también podríamos mandar más datos como nombre del producto, etc. 
     } ],
  # acá vamos a poner más líneas de código

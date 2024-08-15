@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 65e38398fd35
+Revision ID: 2337b70171a6
 Revises: 
-Create Date: 2024-08-09 17:49:04.581933
+Create Date: 2024-08-14 17:24:15.829582
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '65e38398fd35'
+revision = '2337b70171a6'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -38,7 +38,7 @@ def upgrade():
     op.create_table('recipe',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=120), nullable=False),
-    sa.Column('instructions', sa.String(length=120), nullable=False),
+    sa.Column('instructions', sa.Text(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('role',
@@ -49,64 +49,64 @@ def upgrade():
     )
     op.create_table('recipe_ingredient',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('id_ingredients', sa.Integer(), nullable=False),
-    sa.Column('id_recipe', sa.Integer(), nullable=False),
+    sa.Column('ingredient_id', sa.Integer(), nullable=False),
+    sa.Column('recipe_id', sa.Integer(), nullable=False),
     sa.Column('quantity', sa.Float(), nullable=False),
     sa.Column('unit', sa.String(length=120), nullable=False),
-    sa.ForeignKeyConstraint(['id_ingredients'], ['ingredient.id'], ),
-    sa.ForeignKeyConstraint(['id_recipe'], ['recipe.id'], ),
+    sa.ForeignKeyConstraint(['ingredient_id'], ['ingredient.id'], ),
+    sa.ForeignKeyConstraint(['recipe_id'], ['recipe.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('user',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('id_role', sa.Integer(), nullable=False),
+    sa.Column('role_id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=120), nullable=False),
     sa.Column('email', sa.String(length=120), nullable=False),
     sa.Column('password', sa.String(length=80), nullable=False),
     sa.Column('address', sa.String(length=80), nullable=False),
     sa.Column('phone', sa.String(length=80), nullable=False),
     sa.Column('is_active', sa.Boolean(), nullable=False),
-    sa.ForeignKeyConstraint(['id_role'], ['role.id'], ),
+    sa.ForeignKeyConstraint(['role_id'], ['role.id'], ),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('name')
     )
-    op.create_table('car',
+    op.create_table('cart',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('id_user', sa.Integer(), nullable=False),
-    sa.Column('id_product', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('product_id', sa.Integer(), nullable=False),
     sa.Column('units', sa.Integer(), nullable=False),
-    sa.Column('total', sa.Float(), nullable=False),
-    sa.ForeignKeyConstraint(['id_product'], ['product.id'], ),
-    sa.ForeignKeyConstraint(['id_user'], ['user.id'], ),
+    sa.Column('total_ammount', sa.Float(), nullable=False),
+    sa.ForeignKeyConstraint(['product_id'], ['product.id'], ),
+    sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('favorite',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('id_user', sa.Integer(), nullable=False),
-    sa.Column('fav_recipe', sa.Integer(), nullable=False),
-    sa.Column('fav_product', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('fav_recipe', sa.Integer(), nullable=True),
+    sa.Column('fav_product', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['fav_product'], ['product.id'], ),
     sa.ForeignKeyConstraint(['fav_recipe'], ['recipe.id'], ),
-    sa.ForeignKeyConstraint(['id_user'], ['user.id'], ),
+    sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('fee',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('id_user', sa.Integer(), nullable=False),
-    sa.Column('id_profession', sa.Integer(), nullable=False),
-    sa.Column('importe', sa.Float(), nullable=False),
-    sa.ForeignKeyConstraint(['id_profession'], ['profession.id'], ),
-    sa.ForeignKeyConstraint(['id_user'], ['user.id'], ),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('profession_id', sa.Integer(), nullable=False),
+    sa.Column('amount', sa.Float(), nullable=False),
+    sa.ForeignKeyConstraint(['profession_id'], ['profession.id'], ),
+    sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('order',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('id_car', sa.Integer(), nullable=False),
-    sa.Column('date', sa.String(length=120), nullable=False),
-    sa.Column('payment_method', sa.Float(), nullable=False),
+    sa.Column('cart_id', sa.Integer(), nullable=False),
+    sa.Column('date', sa.DateTime(), nullable=False),
+    sa.Column('payment_method', sa.String(length=60), nullable=False),
     sa.Column('total', sa.Float(), nullable=False),
-    sa.ForeignKeyConstraint(['id_car'], ['car.id'], ),
+    sa.ForeignKeyConstraint(['cart_id'], ['cart.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###
@@ -117,7 +117,7 @@ def downgrade():
     op.drop_table('order')
     op.drop_table('fee')
     op.drop_table('favorite')
-    op.drop_table('car')
+    op.drop_table('cart')
     op.drop_table('user')
     op.drop_table('recipe_ingredient')
     op.drop_table('role')

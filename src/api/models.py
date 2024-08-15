@@ -136,8 +136,8 @@ class RecipeIngredient(db.Model):
         def serialize(self):
             return {
             "id": self.id,
-            "ingrdedient_id": self.ingredient_id,
-            "recipe_id": self.recipe_id,
+            "id_ingredients": self.id_ingredients,
+            "id_recipe": self.id_recipe,
             "quantity": self.quantity,
             "unit": self.unit
     }   

@@ -28,23 +28,56 @@
 }
 .container-background{
     position: relative;
-    margin-top: 10em;
+    margin-top: 5em;
 }
 .protein {
-   
     max-width: 50%;
 }
 .card-item {
     position: absolute;
-    top: -40%;
-   
+    top: 10%;
+   width: 20%;
 }
+
 .btn-see-more {
     background-color: var(--color-olive);
     
 }
-
-
+.card-body-info-product{
+    max-width: 25em;
+}
+.dynamic-products {
+    flex-wrap: nowrap;
+ 
+}
+.product-card{
+    max-width: 80%;
+}
+.card-img-top{
+    width: 45%;
+}
+/*MEDIA QUERIES FOR PRODUCTS*/
+@media screen and (max-width:600px) {
+    .card-item {
+      display: flex;
+    }
+    .container-top-product{
+        align-items: center;
+        justify-content: center;
+        position: static;
+    }
+    .container-top-product{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-body-info-product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 /*MEDIA QUERIES*/
 

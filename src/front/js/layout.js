@@ -11,6 +11,7 @@ import injectContext from "./store/appContext";
 import LogIn from "./pages/LogIn.jsx";
 import Register from "./pages/register.jsx";
 import ListOfProducts from "./pages/listofproducts.jsx";
+import ProductDetail from "./pages/productDetail.jsx";
 import Editor from "./pages/editor.jsx";
 
 import { Navbar } from "./component/navbar";
@@ -33,13 +34,13 @@ const Layout = () => {
                 <ScrollToTop>
                     <Navbar />
                     <Routes>
-                        
                         <Route element={<Home />} path="/" />
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<LogIn />} path="/logIn" />
                         <Route element={<Register />} path="/register" />
-                        <Route element={<ListOfProducts />} path="/listofproducts" />
+                        <Route element={<ListOfProducts />} path="/products" />
                         <Route element={<Editor />} path="/editor" />
+                        <Route element={<ProductDetail />} path="/product-detail/:id" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<About />} path="/about" />
                         <Route element={<Contact />} path="/contact" />
