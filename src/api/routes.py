@@ -43,7 +43,7 @@ def add_new_user():
         address = request_body ['address'],
         phone = request_body  ['phone'],
         is_active = request_body ['is_active'],
-        id_role = request_body ['id_role']
+        role_id = request_body ['role_id']
     )
     # print(new_user)
     db.session.add(new_user)
@@ -189,6 +189,20 @@ def get_product(id):
     query_result= especific_product.serialize()
     print(query_result)
     return jsonify(query_result), 200
+
+# GET product image
+@api.route('/product/<int:id>/image', methods=['GET'])
+def get_product_image(id):
+    try:
+        product= Product.query.filter_by(id=id).first()
+
+        if not product.image_url:
+            return jsonify({"msj": "El producto no tiene imagen"}), 404
+        
+        return jsonify({'image-url': product.image_url}), 200
+    except Exception as e:
+        return jsonify({"msj":str(e)}), 500
+    
 
 #DELETE 
 @api.route('/product/<int:id>', methods=['DELETE'])

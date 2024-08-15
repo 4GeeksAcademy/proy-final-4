@@ -146,6 +146,7 @@ class Product(db.Model):
         id = db.Column(db.Integer, primary_key=True)
         name= db.Column(db.String(120), nullable=False)
         cost= db.Column(db.Float, nullable=False)
+        image_url = db.Column(db.String(120), nullable=True)
         favorites = db.relationship("Favorite", backref="product")
         cart = db.relationship("Cart", backref="product")
 
@@ -157,6 +158,7 @@ class Product(db.Model):
             "id": self.id,
             "name": self.name,
             "cost": self.cost,
+            "image_url": self.image_url
     }  
 # cart:id	id-user	id-product	units	importe-total
 class Cart(db.Model):

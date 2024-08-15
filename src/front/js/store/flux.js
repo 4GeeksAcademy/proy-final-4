@@ -103,7 +103,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							"address": address,
 							"phone": phone,
 							"is_active": true,
-							"id_role": 1
+							"role_id": 1
 						})
 					})
 
