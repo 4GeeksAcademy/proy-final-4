@@ -65,8 +65,8 @@ class Fee(db.Model):
         def serialize(self):
             return {
         "id": self.id,
-        "id_user": self.id_user,
-        "id_profession": self.id_profession,
+        "user_id": self.user_id,
+        "profession_id": self.profession_id,
         "amount": self.amount
     }
     # Favorite id	id-user	fav.rec	fav product
@@ -85,7 +85,7 @@ class Favorite(db.Model):
         def serialize(self):
             return {
             "id": self.id,
-            "id_user": self.id_user,
+            "user_id": self.user_id,
             "fav_recipe": self.fav_recipe,
             "fav_product": self.fav_product
     }   
@@ -136,8 +136,8 @@ class RecipeIngredient(db.Model):
         def serialize(self):
             return {
             "id": self.id,
-            "id_ingredients": self.id_ingredients,
-            "id_recipe": self.id_recipe,
+            "ingrdedient_id": self.ingredient_id,
+            "recipe_id": self.recipe_id,
             "quantity": self.quantity,
             "unit": self.unit
     }   
@@ -173,10 +173,10 @@ class Cart(db.Model):
         def serialize(self):
             return {
             "id": self.id,
-            "id_user": self.id_user,
-            "id_product": self.id_product,
+            "user_id": self.user_id,
+            "product_id": self.product_id,
             "units": self.units,
-            "total": self.total
+            "total_ammount": self.total_ammount
     }  
 #order:id	id-car	date	payment-method	total
 class Order(db.Model):
