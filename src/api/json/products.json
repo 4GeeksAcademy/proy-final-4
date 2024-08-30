@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Proteina Whey 1kg",
+    "cost": "50",
+    "image_url": "https://acdn.mitiendanube.com/stores/001/816/807/products/x_trenght-101-a4330078fad72a51aa16408073429934-480-0.jpg"
+  },
+  {
+    "name": "Aminoacidos BCAA 200gr",
+    "cost": "25",
+    "image_url": "https://www.workupsuplementos.com/web/image/product.template/138/image_256/100%25%20AMINO%20BEEF%20200%20COMP%20UNIVERSAL%20NUTRITION?unique=1d56897"
+  },
+  {
+    "name": "Glutamina 180g",
+    "cost": "35",
+    "image_url": "https://va.nice-cdn.com/upload/image/product/large/default/84959_3eac92ca.256x256.png"
+  },
+  {
+    "name": "Omega 3 120 capsulas",
+    "cost": "15",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_2X_723460-MLU43453212370_092020-T.webp"
+  },
+  {
+    "name": "Pre-Entrenamiento 300g",
+    "cost": "30",
+    "image_url": "https://va.nice-cdn.com/upload/image/product/large/default/86132_a15c88ab.256x256.png"
+  },
+  {
+    "name": "Colageno Hidrolizado 400gr",
+    "cost": "40",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_704261-MLU71576420339_092023-O.webp"
+  },
+  {
+    "name": "Barra Energetica",
+    "cost": "18",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUscjRoVfrLh6pGZ0z8aeuKXm6O0cdOglgg&s"
+  },
+  {
+    "name": "Creatina 500g",
+    "cost": "20",
+    "image_url": "https://workupsuplementos.com/web/image/product.template/970/image_256/CREATINA%20500%20GRMS%20GENTECH?unique=b31a3cd"
+  },
+  {
+    "name": "Avena Tradicional",
+    "cost": "20",
+    "image_url": "https://supercharly.cl/tienda/902-home_default/avena-tradicional-quaker-450g.jpg"
+  },
+  {
+    "name": "Isotonico en Polvo 500g",
+    "cost": "22",
+    "image_url": "https://m.media-amazon.com/images/I/61bX7NNFs9L._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "name": "Vitaminas Multivitaminico 90 capsulas",
+    "cost": "28",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_864738-MLU73038744169_112023-O.webp"
+  },
+  {
+    "name": "Galletas de Arroz Integral",
+    "cost": "12",
+    "image_url": "https://images.pricely.ar/images/1/7790070417244.jpg"
+  },
+  {
+    "name": "Bebida de Proteina 500ml",
+    "cost": "10",
+    "image_url": "https://www.masmusculo.com/71367-thickbox_default/bebida-proteica.jpg"
+  },
+  {
+    "name": "Café Verde en Polvo 200g",
+    "cost": "18",
+    "image_url": "https://nuezypecana.com/wp-content/uploads/2024/01/15.jpg"
+  },
+  {
+    "name": "Snack de Almendras y Frutas Secas",
+    "cost": "8",
+    "image_url": "https://static.wixstatic.com/media/a19b94_de120760b88340cea6ea1b8f1784ec50~mv2.jpg/v1/crop/x_0,y_92,w_467,h_839/fill/w_467,h_839,al_c,q_85,enc_auto/mix-pasas.jpg"
+  }
+]

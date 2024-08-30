@@ -1,4 +1,4 @@
-from flask import jsonify, url_for
+from flask import jsonify, url_for # type: ignore
 
 class APIException(Exception):
     status_code = 400

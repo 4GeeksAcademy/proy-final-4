@@ -1,0 +1,62 @@
+@import url('./variables.css');
+
+.cart-card-container {
+    background: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 200px;
+    min-width: 200px;
+    align-items: center;
+}
+
+.cart-card-container button {
+    background: var(--color-white);
+    border-radius: 10px;
+    border: none;
+}
+
+.cart-card-container .image-container {
+    max-width: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.cart-card-container .image-container img {
+    object-fit: contain;
+    aspect-ratio: 1;
+}
+
+.cart-card-container .card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+}
+
+.cart-card-container .card-main-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-card-container .btn-danger {
+    background: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    border-top: 2px solid #f6f6f600;
+}
+
+.cart-card-container .btn-danger:hover {
+    border-top: 2px solid var(--color-red);
+    color: var(--color-red);
+    background: var(--color-white);
+}

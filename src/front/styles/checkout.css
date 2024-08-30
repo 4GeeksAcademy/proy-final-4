@@ -1,0 +1,58 @@
+@import url('./variables.css');
+
+.signup-form-container {
+  outline: 1px solid var(--color-olive);
+  background-color: var(--color-cream);
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.signup-form-container .form-group {
+  margin-bottom: 15px;
+}
+
+.signup-form-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signup-form-container input[type="text"],
+.signup-form-container input[type="email"],
+.signup-form-container input[type="file"],
+.signup-form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-olive);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.signup-form-container .btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-olive);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.signup-form-container .btn:hover {
+  background-color: darken(var(--color-olive), 10%);
+}
+
+.signup-form-container .error {
+  color: red;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .signup-form-container {
+    width: 90%;
+  }
+}

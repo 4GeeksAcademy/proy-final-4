@@ -1,3 +1,80 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+@import url('./variables.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+}
+
+body{
+    background-color: var(--color-light-gray);
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+    border: 1px solid #72bb5348;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+/* BOTON para Scroll to Top */
+.scroll-to-top {
+    background-color: var(--color-white);
+    outline: 2px solid var(--color-olive);
+    border: 3px solid var(--color-white);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top i {
+    color: var(--color-olive);
+    font-size: 2.2rem;
+    padding: 0;
+    height: min-content;
+    width: min-content;
+}
+
+.scroll-to-top:hover {
+    transform: rotateZ(360deg);
+}
+
+/* ESTILO PARA PRODUCTOS ACTIVOS */
+.favorite-on {
+    background: var(--color-red) !important;
+    color: var(--color-light-gray) !important;
+}
+
+.cart-on {
+    background: var(--color-green) !important;
+    color: var(--color-light-gray) !important;
+}

@@ -1,0 +1,35 @@
+@import url('./variables.css');
+
+.about-container {
+    background-color: #f8f9fa; 
+    padding: 30px; 
+    border-radius: 8px; 
+}
+
+.about-container h1 {
+    color: var(--color-forest); 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+}
+
+.about-container p.lead {
+    font-size: 1.2rem; 
+    color: var(--color-olive); 
+  background-color: var(--color-forest);
+    line-height: 1.6; 
+    padding: 4px;
+    border-radius: 5px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.nutrition-text, .personal-trainer-text{
+text-align: left;
+color: var(--color-olive); 
+background-color: var(--color-forest);
+padding: 1em;
+border-radius: 5px;
+
+}
+.personal-trainer-title, .nutrition-title {
+    color: var(--color-cream);
+}

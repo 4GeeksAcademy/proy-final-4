@@ -1,0 +1,59 @@
+@import url('./variables.css'); 
+
+.main-background {
+    background-color: var(--color-olive);
+}
+.edit-card {
+    background-color: var(--color-cream);
+    width: 50%;
+    border: 3px solid var(--color-forest);
+
+  }
+  .card-title {
+    color: var(--color-forest);
+  }
+ 
+  .img-fluid {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+  }
+  .img-wrap:hover {
+    outline: 5px solid var(--color-olive);
+
+  }
+  .btn-profile {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--color-forest);
+    color: var(--color-cream);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+ 
+  .btn-profile:hover {
+    background-color: var(--color-olive);
+    color: var(--color-forest);
+    transform: scale(1.05);
+  }
+  
+  .profile-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 300%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    transform: skewX(-45deg);
+  }
+  
+  .profile-btn:hover::before {
+    left: 100%;
+    transition: all 0.4s ease;
+  }
+  

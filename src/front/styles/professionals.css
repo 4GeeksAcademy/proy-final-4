@@ -1,0 +1,207 @@
+@import url('./variables.css');
+
+.professionals-container {
+    background-color: var(--color-light-green);
+    color: var(--color-forest);
+}
+
+/* ___________________________PARALLAX___________________________ */
+.professionals-container .parallax {
+    background: url('https://reimagined-giggle-7qvg7qxpwvp2xwjj-3000.app.github.dev/scroll-banner-bg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    perspective: 1px;
+    height: 16dvh;
+    min-width: 100%;
+    filter: opacity(0.5);
+}
+
+.professionals-container .top-banner {
+    filter: opacity(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ___________________________SECCION___________________________ */
+.professionals-container section {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    padding: 4em 0;
+    margin: 0 auto;
+    max-width: 80%;
+    min-width: 80%;
+}
+
+.professionals-container section h2 {
+    border-bottom: 1px solid var(--color-olive);
+    font-weight: 400;
+    padding: 4px 2.2em 2px 4px;
+    width: fit-content;
+}
+
+/* ___________________________CARRUSEL___________________________ */
+.professionals-container .slick-slide {
+    width: min-content;
+}
+
+.professionals-container .slick-slide>div {
+    margin: 1em;
+}
+
+.professionals-container .slick-arrow {
+    background: #394B3F;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -20px;
+}
+
+.professionals-container .slick-prev {
+    content: '←';
+}
+
+.professionals-container .slick-next {
+    content: '→';
+}
+
+.professionals-container .slick-dots ul {
+    padding: 0;
+}
+
+/* ___________________________CARDS___________________________*/
+.prof-card-container {
+    z-index: 1;
+    box-shadow: inset -2px -4px 0px 1px var(--color-green);
+    background: var(--color-white);
+    border-radius: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1em;
+    padding-top: 0;
+    min-height: 440px;
+    max-height: 440px;
+}
+
+.p-t-card-container {
+    box-shadow: inset -2px -4px 0px 1px #53bbb2;
+}
+
+.prof-card-container .top-bg-effect {
+    background-color: var(--color-light-green);
+    height: 30%;
+    width: calc(100% + 1.1em);
+    position: absolute;
+    z-index: 9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.professionals-container .image-container {
+    z-index: 99;
+    max-width: 180px;
+    min-width: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.professionals-container .image-container img {
+    border: 0.8em solid var(--color-light-green);
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.prof-card-container .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.prof-card-container .card-body h4 {
+    text-align: center;
+}
+
+.prof-card-container .card-body .card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+}
+
+.prof-card-container .card-footer {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.prof-card-container .card-footer h5 {
+    box-shadow: inset -1px -1px 0px 1px var(--color-green);
+    background: var(--color-light-gray);
+    color: var(--color-forest);
+    text-align: center;
+    margin: auto 0;
+    padding: 0.4em 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.p-t-card-container .card-footer h5 {
+    box-shadow: inset -1px -1px 0px 1px #53bbb2;
+}
+
+.prof-card-container .card-footer h5:hover {
+    background: var(--color-green);
+    color: var(--color-white);
+}
+
+.p-t-card-container .card-footer h5:hover {
+    background: #53bbb2;
+}
+
+.prof-card-container .card-footer .more-link {
+    color: var(--color-forest);
+    text-decoration: none;
+}
+
+.prof-card-container .card-footer .agenda-btn {
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+/* ___________________________MEDIA_Q___________________________ */
+@media (width < 992px) {
+    .professionals-container section {
+        max-width: 90%;
+        min-width: 90%;
+    }
+
+    .slick-arrow {
+        padding: 16px;
+        margin: 0 -10px;
+    }
+}
+
+@media (width < 768px) {
+    .slick-arrow {
+        display: none;
+    }
+}

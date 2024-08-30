@@ -1,0 +1,202 @@
+@import url('./variables.css');
+
+.navbar-container {
+    box-shadow: 0px -4px 8px var(--color-forest);
+}
+
+.navbar-container .logo-container {
+    width: min-content;
+    display: flex;
+}
+
+.navbar-container .logo-container img {
+    max-width: 3em;
+}
+
+.navbar-container .logo-container span {
+    color: var(--color-forest);
+    font-family: var(--font-logo);
+    font-weight: bolder;
+    font-size: 1.4em;
+    margin: auto;
+}
+
+.navbar-container a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container .nav-item button, .dropdown-user-menu button {
+    border: none;
+    background: none;
+    padding: 0 1em;
+}
+
+.navbar-container .nav-item i {
+    font-size: 1.6em;
+}
+
+.navbar-container .bi-suit-heart-fill {
+    color: var(--color-red);
+}
+
+.navbar-container .nav-item .i-name {
+    display: none;
+}
+
+.navbar-container .nav-text-item i {
+    display: none;
+}
+
+.navbar-container .nav-text-item .i-name {
+    display: flex;
+}
+
+.navbar-container .nav-text-item span {
+    font-size: 1.3em;
+}
+
+.navbar-container .favs-button {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container .favs-counter {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: var(--font-primary);
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-container .nav-item button:focus{
+    border-bottom: 1px solid var(--color-olive);
+    background: var(--color-light-green);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.links-container .home-to-register, 
+.links-container .home-to-login {
+    color: var(--color-forest);
+
+}
+.links-container .home-to-register:hover, 
+.links-container .home-to-login:hover {
+border-bottom: 1px solid var(--color-forest);
+    
+}
+
+
+/* ______________RESPONSIVE______________ */
+@media (width > 1024px) {
+    .navbar-container .container-fluid{
+        width: 90%;
+    }
+}
+
+@media (width > 992px) {
+    .navbar-container .nav-item .bi-bell{
+        position: relative;
+    }
+    
+    .navbar-container .nav-item .favs-counter{
+        position: absolute;
+        top: -10px;
+        left: -12px;
+    }
+}
+
+@media (width < 992px) {
+    .navbar-light .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-light .navbar-toggler .bi-list {
+        color: var(--color-forest);
+        font-size: 1.8em;
+        font-weight: bolder !important;
+    }
+
+    .navbar-container .nav-item:last-child button {
+        border: none;
+    }
+
+    .navbar-container .nav-item button{
+        border-bottom: 1px solid var(--color-olive);
+        transition: 0.4s ease;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .navbar-container .nav-item button:hover {
+        border-bottom: 1px solid var(--color-green);
+        background-color: var(--color-light-green);
+    }
+
+    .navbar-container .nav-item button,
+    .link{
+        display: flex;
+        align-items: center;
+        padding: 0.5em 1em;
+        width: 100%;
+    }
+
+    .navbar-container .nav-item .i-name {
+        display: flex;
+        padding: 0 1em;
+        font-size: 1.2em;
+    }
+
+    .navbar-container .nav-text-item i {
+        display: flex;
+    }
+
+    .navbar-container .user-list {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0 1em;
+        width: 100%;
+    }
+
+    .navbar-container .user-list .nav-link {
+        width: 100%;
+    }
+
+    .navbar-container .dropdown-user-menu {
+        width: 100%;
+        border: none;
+    }
+
+    .navbar-container .dropdown-user-menu li{
+        width: 100%;
+    }
+}
+
+@media (width < 555px) {
+    .navbar-container .logo-container img {
+        max-width: 2em;
+    }
+
+    .navbar-container .logo-container span {
+        font-size: 1.2em;
+    }
+}
+
+@media (height < 744px) and (width < 425) {
+    .navbar-container .nav-item .i-name {
+        font-size: 1em;
+    }
+    .navbar-container .nav-item button,
+    .link{
+        padding: 0.3em 1em;
+    }
+}

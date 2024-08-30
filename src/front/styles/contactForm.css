@@ -1,0 +1,77 @@
+
+@import url('./variables.css');
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f5f5f5;
+}
+
+.contact-form-container .contact-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.contact-title{
+    color: var(--color-forest);
+}
+.contact-label{
+    color: var(--color-forest);
+}
+
+.contact-form-container .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+ .logo-nutri {
+    width: 20%;
+}
+.contact-form-container .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-olive);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.contact-form-container .form-control:focus {
+    border-color: var(--color-olive);
+    outline: none;
+}
+
+.contact-form-container .error-message {
+    color: red;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.contact-form-container .submit-button{
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-olive);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+}
+.contact-form-container .submit-button:hover{
+    background-color: var(--color-forest);
+    
+}
+
+.contact-form-container .submit-button:disabled {
+    background-color: #ccc;
+}

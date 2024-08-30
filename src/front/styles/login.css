@@ -1,0 +1,65 @@
+@import url('./variables.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+.header-login-title{
+    color:var(--color-forest);
+}
+.login-body {
+    background-color: var(--color-olive);
+    width:100dvw;
+    height: 100dvh;
+}
+.container-login{
+    border: 2px solid var(--color-forest);
+}
+.header-container{
+width: 68%;
+}
+.logo-img{
+    width: 3.5em;
+}
+.login-body .btn-login {
+    background-color: var(--color-olive);
+    border: 2px solid var(--color-forest);
+}
+.login-body .btn-login:hover {
+    background-color: var(--color-forest);
+  color: var(--color-cream);
+    border: solid 2px var(--color-olive);
+    /* transition: 0.5s all ease; */
+}
+.login-body .form-control {
+    border: 1px solid var(--color-olive);
+   
+}
+.login-body .register-link{
+    color: var(--color-forest);
+ text-decoration: none;
+}
+.login-body .register-link:hover{
+    color: var(--color-forest);
+    text-decoration: underline; 
+}
+.login-body .error-message{
+    color: #f55!important;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+/*STYLES ONLY FOR REGISTER.JSX */
+
+.container-header-register{
+    width:63%;
+}

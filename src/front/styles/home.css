@@ -1,7 +1,275 @@
-/*
-    home.css: This website contains selectors only used in home.css
+@import url('./variables.css');
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.home-container .banner {
+    max-height: 100dvh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.home-container .banner img {
+    max-width: 100%;
+    mask-image: linear-gradient(red 77%, transparent);
+    z-index: -1;
+}
+
+.home-container .banner .title-container {
+    position: absolute;
+    left: 16%;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(1px);
+    width: min-content;
+    padding: 20px 40px;
+    border-radius: 44px;
+    /* margin-left: 10%; */
+}
+
+.home-container .banner h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 0px var(--color-cream);
+}
+
+/* *************____PARALLAX__EFFECT____***************** */
+.home-container .parallax {
+    background: url('https://img.freepik.com/premium-vector/abstract-green-stripes-vector-background_88343-4632.jpg?w=740');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    perspective: 1px;
+    height: 16dvh;
+    min-width: 100%;
+    filter: opacity(0.5);
+}
+
+/* *************____SECCIONES____***************** */
+
+.home-container section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    height: min-content;
+    padding: 4em 0;
+}
+
+.home-container section article {
+    margin: 0 2rem;
+    height: 100%;
+}
+
+.home-container section .text-container {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container section p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+}
+
+.home-container section .img-container {
+    overflow: hidden;
+    min-width: 40%;
+    max-width: 40%;
+    max-height: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.home-container section .img-container img {
+    border-radius: 10px;
+    margin: auto 0;
+}
+
+.home-container h5 {
+    background: var(--color-light-green);
+    text-align: center;
+    padding: 0.1em 0;
+    margin-bottom: 1em;
+    cursor: pointer;
+    border-radius: 0px 0px 10px 10px;
+    transition: 0.3s ease;
+}
+
+.home-container h5:hover {
+    background: var(--color-cream);
+}
+
+.home-container .more-link {
+    color: var(--color-forest);
+    text-decoration: none;
+}
+
+/* LISTA DE PRODUCTOS */
+
+.products-home-container {
+    width: min-content;
+    height: min-content;
+    display: flex;
+}
+
+.products-home-container .product-card-container {
+    box-shadow: 0px 1px 4px -1px var(--color-forest);
+    background: var(--color-white);
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+    max-width: 180px;
+    min-width: 180px;
+    align-items: center;
+    transition: 0.4s ease;
+}
+
+.products-home-container .product-card-container .card-link-button {
+    background: var(--color-white);
+    border-radius: 10px;
+    border: none;
+}
+
+.products-home-container .product-card-container .image-container {
+    max-width: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.products-home-container .product-card-container .image-container img {
+    object-fit: contain;
+    aspect-ratio: 1;
+}
+
+/* *************____RESPONSIVE____***************** */
+@media (width > 1400px) {
+    .home-container .banner h1 {
+        font-size: 6rem;
+    }
+    .products-home-container .product-card-container {
+        max-width: 220px;
+        min-width: 220px;
+    }
+}
+
+@media (width < 1024px) {
+    .home-container .banner h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (width < 845px) {
+
+    .home-container .banner .title-container {
+        left: 10%;
+    }
+
+    .home-container .banner h1 {
+        font-size: 2.4rem;
+    }
+
+    .home-container section {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    .home-container section article {
+        margin: 0;
+    }
+
+    .home-container section .img-container {
+        min-width: 40%;
+        max-width: 100%;
+        min-height: 22%;
+    }
+
+    .home-container section p {
+        line-clamp: 5;
+        -webkit-line-clamp: 5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .home-container .sports-title {
+        margin-top: 1em;
+    }
+
+    .products-home-container {
+        width: min-content;
+        height: min-content;
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-row: auto auto;
+        grid-column-gap: 20px;
+    }
+
+    .products-home-container .product-card-container {
+        max-width: 200px;
+        min-width: 200px;
+    }
+    
+    .products-home-container .product-card-container .image-container {
+        max-width: 200px;
+        min-width: 200px;
+        margin: auto;
+    }
+}
+
+@media (width < 555px) {
+    .home-container .banner .title-container {
+        left: 10%;
+        padding: 10px 20px;
+    }
+
+    .home-container .banner h1 {
+        font-size: 2rem;
+    }
+
+    .products-home-container {
+        grid-template-columns: 160px auto;
+    }
+
+    .products-home-container .product-card-container {
+        max-width: 160px;
+        min-width: 160px;
+    }
+
+    .products-home-container .product-card-container .image-container {
+        max-width: 140px;
+        min-width: 140px;
+        margin: auto;
+    }
+}
+
+@media (width < 400px) {
+    .home-container .banner h1 {
+        font-size: 1.4rem;
+    }
+
+    .products-home-container {
+        grid-template-columns: 140px auto;
+    }
+
+    .products-home-container .product-card-container {
+        max-width: 140px;
+        min-width: 140px;
+    }
+    
+
+    .products-home-container .product-card-container .image-container {
+        max-width: 120px;
+        min-width: 120px;
+        margin: auto;
+    }
+}

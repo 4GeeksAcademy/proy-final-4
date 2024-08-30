@@ -18,6 +18,10 @@ gunicorn = "*"
 cloudinary = "*"
 flask-admin = "*"
 typing-extensions = "*"
+flask-jwt-extended = "*"
+mercadopago = "*"
+flask-script = "*"
+flask-bcrypt = "*"
 
 [requires]
 python_version = "3.10"
