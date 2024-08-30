@@ -9,4 +9,4 @@ pipenv install
 
 pipenv run upgrade
 
-flask insert-test-products
+flask insert-test-data
