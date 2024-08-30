@@ -1,0 +1,89 @@
+@import url('./variables.css');
+
+.editor-container {
+  margin-top: 80px;
+}
+
+.editor-container .nav-item,
+.editor-container .nav-link {
+  outline: 2px solid var(--color-olive);
+  border-bottom: none;
+  background-color: var(--color-cream);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: var(--color-forest);
+  font-size: 1.1em;
+}
+
+.editor-container .nav-link {
+  border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.editor-container .nav-link:hover {
+  background-color: var(--color-white);
+  color: var(--color-forest);
+}
+
+.editor-container .nav-link:focus {
+  background-color: var(--color-white);
+  color: var(--color-forest);
+}
+
+.add-product-container {
+  outline: 1px solid var(--color-olive);
+  background-color: var(--color-cream);
+  margin: auto;
+  padding: 20px;
+}
+
+.add-product-container .add-product-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-container .form-group {
+  margin-bottom: 15px;
+}
+
+.add-product-container .form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.add-product-container .error {
+  color: red;
+  margin-top: 5px;
+}
+
+.add-product-container .form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-product-container .btn {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-product-container .btn-primary {
+  background-color: var(--color-olive);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .add-product-container .form-buttons {
+    flex-direction: column;
+  }
+
+  .add-product-container .btn {
+    margin: 5px 0;
+  }
+}

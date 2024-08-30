@@ -17,4 +17,10 @@
 
     --font-logo: "Averia Serif Libre", serif;
     --font-primary: "Afacad", sans-serif;
+
+
+    /* VARIABLES PARA SCROLLBAR */
+    --sb-track-color: var(--color-white);
+    --sb-thumb-color: var(--color-light-green);
+    --sb-size: 5px;
 }

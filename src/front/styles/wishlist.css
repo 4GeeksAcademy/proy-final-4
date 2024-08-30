@@ -1,0 +1,82 @@
+@import url('./variables.css');
+
+.wishlist-container {
+    display: flex;
+}
+
+.wishlist-container .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.wishlist-container .aside-container {
+    position: relative;
+    width: 30%;
+    border-left: 1px solid var(--color-forest);
+    min-height: 200px;
+}
+.wishlist-container .aside-container .buttons-container{
+    position: fixed;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 20%;
+}
+
+.wishlist-container .aside-container .buttons-container a{
+    width: 100%;
+    height: min-content;
+    color: var(--color-forest);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.wishlist-container .aside-container button {
+    border: 1px solid var(--color-forest);
+    background: var(--color-light-green);
+    border-radius: 4px;
+    padding: 0.6em;
+    margin: 1em;
+    font-weight: bolder;
+    transition: 0.4s ease;
+    width: 80%;
+}
+
+.wishlist-container .aside-container button:hover {
+    border: 1px solid var(--color-forest);
+    background: var(--color-green);
+}
+
+@media (width < 768px) {
+    .wishlist-container {
+        flex-direction: column;
+    }
+
+    .wishlist-container .main-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .wishlist-container .aside-container {
+        border-top: 1px solid var(--color-forest);
+        border-left: none;
+        min-width: 90%;
+        min-height: 160px;
+        margin: 1em auto;
+    }
+    .wishlist-container .aside-container .buttons-container{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        min-width: 100%;
+        margin: 1em 0;
+    }
+}

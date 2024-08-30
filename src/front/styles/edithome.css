@@ -1,0 +1,109 @@
+@import url('./variables.css');
+
+.edit-home-container textarea {
+    text-wrap: pretty;
+    text-wrap: balance;
+}
+
+.edit-home-container {
+    outline: 1px solid var(--color-olive);
+    background-color: var(--color-cream);
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-home-container .editor-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.edit-home-container .format-btn {
+    background-color: var(--color-olive);
+    box-shadow: 1px 1px 0px 0px var(--color-forest);
+    color: var(--color-white);
+    text-shadow: 1px 1px 0px var(--color-forest);
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-home-container .format-btn:hover {
+    background-color: var(--color-forest);
+}
+
+.edit-home-container .format-btn .dropdown-toggle {
+    text-shadow: 1px 1px 0px var(--color-forest);
+    color: var(--color-white);
+    background: none;
+    border: none;
+}
+
+.edit-home-container .editor-textarea {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border: none;
+    outline: 1px solid var(--color-gray);
+    border-radius: 4px;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-y: scroll;
+}
+
+.edit-home-container .editor-textarea:focus {
+    outline: 3px solid var(--color-olive);
+}
+
+.edit-home-container .editor-textarea{
+    background-color: var(--color-light-gray);
+}
+
+.edit-home-container .editor-textarea::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+.edit-home-container .editor-textarea::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+.edit-home-container .editor-textarea::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+    border: 1px solid #72bb5348;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .edit-home-container .editor-textarea {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+.edit-home-container .word-count {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.edit-home-container .save-btn {
+    background-color: var(--color-olive);
+    border: none;
+    box-shadow: 0 1px 0px 0px var(--color-forest);
+    transition: 0.4s ease;
+}
+
+.edit-home-container .save-btn:hover {
+    box-shadow: 0 1px 0px 1px var(--color-forest);
+}

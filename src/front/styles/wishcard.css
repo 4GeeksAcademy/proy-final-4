@@ -1,0 +1,80 @@
+@import url('./variables.css');
+
+.wish-card-container{
+    background: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 200px;
+    min-width: 200px;
+    align-items: center;
+}
+
+.wish-card-container button{
+    background: var(--color-white);
+    border-radius: 10px;
+    border: none;
+}
+.wish-card-container .image-container{
+    max-width: 200px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.wish-card-container .image-container img{
+    object-fit: contain;
+    aspect-ratio: 1;
+}
+
+.wish-card-container .card-title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+}
+
+.card-main-btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.wish-card-container .card-btn h6{
+    margin: 8px auto;
+}
+
+.wish-card-container .card-btn{
+    color: var(--color-white);
+    border-radius: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.wish-card-container .top-btn{
+    border-bottom: 2px solid var(--color-red);
+    color: var(--color-red);
+}
+
+.wish-card-container .bottom-btn{
+    border-top: 2px solid var(--color-green);
+    color: var(--color-green);
+}
+
+.wish-card-container .top-btn:hover{
+    background: var(--color-red);
+    color: var(--color-white);
+}
+
+.wish-card-container .bottom-btn:hover{
+    background: var(--color-green);
+    color: var(--color-white);
+}
+
+.wish-cart-on{
+    background: var(--color-green);
+    color: var(--color-white);
+}
